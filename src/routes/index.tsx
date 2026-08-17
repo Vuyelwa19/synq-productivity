@@ -31,10 +31,10 @@ export const Route = createFileRoute("/")({
         content:
           "Turn meeting notes into summaries, goals into task plans, and questions into structured research — in one clean AI workspace.",
       },
-      { property: "og:title", content: "NorthPilot — Work Smarter. Plan Better. Research Faster." },
+      { property: "og:title", content: "NorthPilot — AI Meeting Notes, Task Plans & Research" },
       {
         property: "og:description",
-        content: "One AI workspace for meeting summaries, project plans and research briefs.",
+        content: "Turn meeting notes into summaries, goals into task plans, and questions into structured research — in one clean AI workspace.",
       },
     ],
   }),

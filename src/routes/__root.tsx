@@ -83,16 +83,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "One AI workspace to summarize meetings, plan projects and research faster.",
+          "Turn meeting notes into summaries, goals into task plans, and questions into structured research — in one clean AI workspace.",
       },
       { name: "author", content: "NorthPilot" },
-      { property: "og:title", content: "NorthPilot — Work Smarter. Plan Better. Research Faster." },
+      { property: "og:title", content: "NorthPilot — AI Meeting Notes, Task Plans & Research" },
       {
         property: "og:description",
-        content: "One AI workspace to summarize meetings, plan projects and research faster.",
+        content: "Turn meeting notes into summaries, goals into task plans, and questions into structured research — in one clean AI workspace.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "NorthPilot — AI Meeting Notes, Task Plans & Research" },
+      { name: "twitter:description", content: "Turn meeting notes into summaries, goals into task plans, and questions into structured research — in one clean AI workspace." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/08afbc43da1987035c557121be265783/id-preview-a4f57979--e2bbe3b7-11cf-4587-956e-de360ad8bc48.lovable.app-1786970867321.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/08afbc43da1987035c557121be265783/id-preview-a4f57979--e2bbe3b7-11cf-4587-956e-de360ad8bc48.lovable.app-1786970867321.png" },
     ],
     links: [
       {
