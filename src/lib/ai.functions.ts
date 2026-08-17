@@ -1,5 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
+import { parseModelJson } from "./ai-json";
+
 
 const Input = z.object({
   kind: z.enum(["meeting", "plan", "research", "followup"]),
