@@ -29,6 +29,7 @@ export const runAi = createServerFn({ method: "POST" })
       body: JSON.stringify({
         model: "google/gemini-3.6-flash",
         response_format: { type: "json_object" },
+        max_tokens: 8000,
         messages: [
           { role: "system", content: SYSTEM[data.kind] },
           { role: "user", content: JSON.stringify(data.payload) },
@@ -45,11 +46,6 @@ export const runAi = createServerFn({ method: "POST" })
 
     const json = (await res.json()) as { choices?: { message?: { content?: string } }[] };
     const content = json.choices?.[0]?.message?.content ?? "{}";
-    try {
-      return JSON.parse(content) as Record<string, any>;
-    } catch {
-      const m = content.match(/\{[\s\S]*\}/);
-      if (m) return JSON.parse(m[0]) as Record<string, any>;
-      throw new Error("The AI returned an unreadable response. Try again.");
-    }
+    return parseModelJson<Record<string, any>>(content);
   });
+
